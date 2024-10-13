@@ -1,0 +1,403 @@
+/* YLEISET TYYLIT */
+body, html {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    font-size: xx-large;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0; /* Poistaa tilan kappaleiden ylä- ja alapuolelta */
+    padding-bottom: 10px; /* Lisää tilaa kappaleiden väliin */
+}
+
+/* SISÄLTÖALUE SIVUPALKIN JÄLKEEN */
+#index, #Portfolio, #CV, #Yhteydenotto {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* PIILOTA LOGO VAIN ETUSIVULLA */
+.index-page .sidenav .logo {
+    visibility: hidden;
+}
+
+/* SIDENAV TYYLIT */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ECE7E3;
+    padding-top: 60px;
+    text-align: center;
+    z-index: 1;
+}
+
+.sidenav .logo {
+    margin-bottom: 20px; /* Lisää tilaa logon ja linkkien väliin */
+}
+
+.sidenav .logo img {
+    width: 200px; /* Logon leveys */
+    height: auto;
+}
+
+.sidenav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* HEADER-OSION TYYLIT */
+.header-section {
+    display: flex;
+    justify-content: center; /* Keskittää logon vaakatasossa */
+    align-items: center; /* Keskittää logon pystysuunnassa */
+    height: 60vh; /* Koko näkymän korkeus */
+    background-color: #ECE7E3; /* Taustaväri */
+}
+
+.header-text {
+    max-width: 50%;
+    margin-left: 200px;
+    padding-right: 20px;
+}
+
+#cv-heading {
+    text-align: center;
+}
+
+
+.header-text h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+.header-image img {
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+/* VAIN ETUSIVULLA NÄKYVÄ LOGO */
+.full-logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 0px;
+    animation: fadeIn 2s ease-out; /* Fade-in-efekti logolle */
+}
+
+/* CONTENT-SECTION - KESKITETTY TEKSTI */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 700px); /* Säätää korkeutta laskennallisesti */
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 50px;
+}
+
+/* FADE-IN EFEKTIT */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* FADE-IN TEKSTILLE */
+.fade-in-text {
+    opacity: 0;
+    animation: textFadeIn 1s ease-in forwards;
+}
+
+.fade-in-text:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.fade-in-text:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.fade-in-text:nth-child(3) {
+    animation-delay: 3s;
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SOCIAL MEDIA TYYLIT */
+.social-media {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.social-media a {
+    font-size: 40px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.social-media a:hover {
+    color: #555;
+}
+
+/* TYÖSKENTELYTAVAT JA KAKSI PALSTAA */
+.column {
+    float: left;
+    width: 48%; /* Sarakkeiden tasainen leveys */
+    margin-bottom: 25px; /* Tasainen väli seuraavaan osioon */
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 40px;
+}
+
+.column:hover {
+    transform: scale(1.02); /* Pieni suurennus hoverin aikana */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* SKILLS-OSION TYYLIT */
+.skills-section {
+    display: flex;
+    justify-content: space-between; /* Jakaa palkit kahteen osaan */
+    margin-bottom: 30px;
+}
+
+.skills-column {
+    width: 45%; /* Jokainen osio vie 45% leveydestä */
+    margin-bottom: 50px;
+}
+
+.skills-bar {
+    width: 100%;
+    background-color: #ECE7E3;
+    margin-bottom: 10px;
+}
+
+.skills-bar .skills {
+    padding: 10px;
+    color: white;
+    text-align: right;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Fade-in-efekti skills-bareille */
+}
+
+/* SKILLS-BAREILLE FADE-IN EFEKTI */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* SKILLS-BAREILLE VÄRIT */
+.Toimisto-ohjelmistot { width: 90%; background-color: #291e10; }
+.Tietokoneen { width: 80%; background-color: #291e10; }
+.Kuvankäsittely { width: 65%; background-color: #291e10; } 
+.Sosiaalinen { width: 60%; background-color: #291e10; }
+.Suomi { width: 90%; background-color: #291e10; }
+.Englanti { width: 80%; background-color: #291e10; }
+.Tagalog { width: 65%; background-color: #291e10; }
+.Ruotsi { width: 60%; background-color: #291e10; }
+
+/* INFO-OSION TYYLIT */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.info-box {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.info-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Etusivun logo ja teksti */
+
+
+.header-logo {
+    width: 650px; /* Voit säätää logon kokoa tarvittaessa */
+    animation: fadeIn 2s ease-in-out;
+    margin-left: 30%;
+}
+
+
+
+/* Animaatiot ETUSIVULLE*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Keskitetään koko portfolio-osio */
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;  /* Lisää vähän sisätilaa ylhäältä ja sivuilta */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Otsikko */
+.portfolio-otsikko {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Otsikon ja johdannon väliin lisätään tilaa */
+.johdanto {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    line-height: 1.6;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Portfolio sisältö, kuten projektit */
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;  /* Tilaa projektien välille */
+    max-width: 1200px;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+/* Jokainen yksittäinen portfolio-kortti */
+.portfolio-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaatiot */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#Yhteydenotto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    iframe {
+        height: 800px;
+    }
+}
